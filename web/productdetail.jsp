@@ -48,7 +48,7 @@
                             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
                             4.0 stars
                         </div>
-                            <a href="ProductList" class="btn btn-danger">Add to Cart</a>
+                            <a href="AddItemToCart?productid=${product.productid}" class="btn btn-danger">Add To Cart</a>
                     </div>
                     <!-- /.card -->
 
