@@ -55,21 +55,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Credit card 16 digit</label>
-                                    <input class="form-control" type="text" name="" placeholder="">
+                                    <input class="form-control" type="text" name="cardno">
                                 </div>
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control" type="text" name="" placeholder="">
+                                    <input class="form-control" type="text" name="cardname">
                                 </div>
                                 <div class="form-group">
                                     <label>Month / Year </label>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm">
-                                                <input class="form-control" type="text" name="" placeholder="month">
+                                                <input class="form-control" type="text" name="month" placeholder="month">
                                             </div>
                                             <div class="col-sm">
-                                                <input class="form-control" type="text" name="" placeholder="year">
+                                                <input class="form-control" type="text" name="year" placeholder="year">
                                             </div>
                                         </div>
                                     </div>
@@ -79,8 +79,6 @@
                                     <input class="form-control" type="text" name="">
                                 </div>
                                 <button type="submit" class="btn btn-danger mb-2">Accept</button>
-                                
-                                
                             </form>
                         </div>
                     </div>

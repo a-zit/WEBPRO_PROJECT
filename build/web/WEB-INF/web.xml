@@ -25,8 +25,13 @@
         <servlet-class>Servlet.ProductDetailServlet</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< HEAD
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>Servlet.PaymentServlet</servlet-class>
+=======
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <servlet-class>Servlet.AddItemToCartServlet</servlet-class>
+>>>>>>> 46c186de5535df0701fdeccdb5c3facce2c46f83
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -53,8 +58,13 @@
         <url-pattern>/ProductDetail</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< HEAD
         <servlet-name>PaymentServlet</servlet-name>
         <url-pattern>/Payment</url-pattern>
+=======
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <url-pattern>/AddItemToCart</url-pattern>
+>>>>>>> 46c186de5535df0701fdeccdb5c3facce2c46f83
     </servlet-mapping>
     <session-config>
         <session-timeout>
