@@ -62,13 +62,11 @@ public class RegisterServlet extends HttpServlet {
         if (controller.findCustomerUsername(username) != null) {
             Customer customerformdb = controller.findCustomerUsername(username);
             if (customer.getUsername().equals(customerformdb.getUsername())) {
-                session.setAttribute("registeralert", "Username already use, Please Change username");
+                session.setAttribute("registeralert", "Username already use, Please Try Again");
                 response.sendRedirect("Register");
+               
             }
-            else if (customer.getMail().equals(customerformdb.getMail())) {
-                session.setAttribute("registeralert", "Email already use, Please Change Email");
-                response.sendRedirect("Register");
-            }
+
         } else {
             try {
                 controller.create(customer);
