@@ -63,7 +63,7 @@ public class RegisterServlet extends HttpServlet {
             Customer customerformdb = controller.findCustomerUsername(username);
             if (customer.getUsername().equals(customerformdb.getUsername())) {
                 session.setAttribute("registeralert", "Username already use, Please Try Again");
-                response.sendRedirect("Register");
+                getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
                
             }
 
