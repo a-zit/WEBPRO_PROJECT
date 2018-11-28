@@ -4,6 +4,7 @@
     Author     : Pluem
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -33,66 +34,40 @@
                 <div class="row">
                     <div class="col-sm-7 card">
                         <div class="card-body">
-                            <h5>YOUR CART ( 2 )</h5>
+                            <h5>YOUR CART (  )</h5>
                             <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <img src="image/1.png" class="img-thumbnail">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="row" style="font-size: 12px;">
-                                        <div class="col-sm-6">
-                                            <p>PRODUCT NAME :</p>
-                                            <p>TYPE :</p>
-                                            <p>SIZE :</p>
-                                            <p>QTY :</p>
+                            <c:forEach items="${cart.lineItems}" var="lineItem">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img src="Images/${lineItem.product.productid}.png" class="img-thumbnail">
                                         </div>
                                         <div class="col-sm-6">
-                                            <p>BB SOLID TEE</p>
-                                            <p>T-SHIRTS</p>
-                                            <p> M </p>
-                                            <p> 1</p>
+                                            <div class="row" style="font-size: 12px;">
+                                                <div class="col-sm-6">
+                                                    <p>PRODUCT NAME :</p>
+                                                    <p>TYPE :</p>
+                                                    <p>SIZE :</p>
+                                                    <p>QTY :</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p>${lineItem.product.productname}</p>
+                                                    <p> ${lineItem.product.producttype} </p>
+                                                    <p> ${lineItem.product.productsize} </p>
+                                                    <p> ${lineItem.quantity} </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>${lineItem.product.price} ฿</p>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-sm-3">
-                                    <p>999 ฿</p>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                            <button type="button" class="btn btn-outline-secondary">Remove</button>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <img src="image/3.png" class="img-thumbnail">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="row" style="font-size: 12px;">
-                                        <div class="col-sm-6">
-                                            <p>PRODUCT NAME :</p>
-                                            <p>TYPE :</p>
-                                            <p>SIZE :</p>
-                                            <p>QTY :</p>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p>ESSENTIALS LINEAR TEE</p>
-                                            <p>T-SHIRTS</p>
-                                            <p> M </p>
-                                            <p> 1</p>
-                                        </div>
+                                    <div class="text-right">
+                                        <button type="button" class="btn btn-outline-secondary">Remove</button>
                                     </div>
-
+                                    <hr>
                                 </div>
-                                <div class="col-sm-3">
-                                    <p>1000 ฿</p>
-                                </div>
-                            </div>
-                            <div class="text-right">
-                            <button type="button" class="btn btn-outline-secondary">Remove</button>
-                            </div>
-                            <hr>
+                            </c:forEach>                  
                         </div>
                     </div>
                     <div class="col-sm-1"></div>
@@ -107,14 +82,12 @@
                                     <p>TOTAL</p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <p>1999 ฿</p>
+                                    <p>${cart.totalPrice} ฿</p>
                                     <p>100 ฿</p>
                                     <p>2099 ฿</p>
                                 </div>
                             </div>
                             <hr>
-                            
-
                             <div class="text-center">
                                 <a href="payment.jsp"><button type="button" class="btn btn-outline-warning">CHECKOUT</button></a>
                             </div>
