@@ -61,7 +61,7 @@
             <!-- Page Features -->
             <div class="row text-center">
                 <c:forEach items="${products}" var="p">
-                    <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4" style="height: auto;">
                         <div class="card">
                             <img
                                 class="card-img-top"
