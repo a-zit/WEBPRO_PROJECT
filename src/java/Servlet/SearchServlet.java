@@ -35,7 +35,7 @@ public class SearchServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         ProductJpaController productJpaController = new ProductJpaController(utx, emf);
-        String searchinput = (request.getParameter("searchinput")).toUpperCase();
+        String searchinput = request.getParameter("searchinput");
 
 
         if (searchinput != null) {
@@ -53,7 +53,7 @@ public class SearchServlet extends HttpServlet {
             getServletContext().getRequestDispatcher("/productlist.jsp").forward(request, response);
         } else {
             List<Product> products = productJpaController.findProductName(" ");
-            session.setAttribute("products", products);
+            request.setAttribute("products", products);
             getServletContext().getRequestDispatcher("/productlist.jsp").forward(request, response);
         }
 
