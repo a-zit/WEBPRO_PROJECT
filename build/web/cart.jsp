@@ -30,7 +30,7 @@
                             </a>
                         </div>-->
             <!--Empty Cart End-->
-            <div class="container" style="margin-top: 10vh;">
+            <div class="container" style="margin-top: 2vh;">
                 <div class="row">
                     <div class="col-sm-7 card">
                         <div class="card-body">
