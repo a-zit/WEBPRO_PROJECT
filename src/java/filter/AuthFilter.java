@@ -34,8 +34,8 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
         HttpSession session = httpServletRequest.getSession(true);
-        Customer account = (Customer)session.getAttribute("account");
-        if(account != null) {
+        Customer customer = (Customer)session.getAttribute("customer");
+        if(customer != null) {
             chain.doFilter(request, response);
         } else {
             ((HttpServletResponse)response).sendRedirect("Login");
