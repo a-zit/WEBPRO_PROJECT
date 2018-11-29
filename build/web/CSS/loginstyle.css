@@ -5,6 +5,7 @@ body#LoginForm {
     background-size:cover; 
     padding:10px;
     min-height:100vh;
+    overflow-x: hidden;
 }
 ::-webkit-input-placeholder {
    text-align: center;
