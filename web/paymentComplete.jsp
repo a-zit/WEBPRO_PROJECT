@@ -26,7 +26,7 @@
                 <hr class="mb-5" style="width:50vw">
                 <img src="Images/iconcheck.ico" style="width:5vw;">
                 <hr style="width:50vw;">
-                <a href="productlist.jsp">
+                <a href="ProductList">
                     <button type="button" class="btn btn-outline-dark mt-5" >Continue Shopping</button>
                 </a>
             </div>
