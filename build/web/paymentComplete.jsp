@@ -24,14 +24,26 @@
                 <h1 class="mb-4">Thanks for Purchase</h1>
                 <p class="mb-5">We Hope you like ours Product. </p>
                 <hr class="mb-5" style="width:50vw">
-                <img src="Images/iconcheck.ico" style="width:5vw;">
+                
+                <div class="container">
+                    <div class="card mt-5" >
+                        <div class="card-header">
+                            <h3>LYCAN STORE</h3>
+                        </div>
+                        <div class="card-body">
+                            <img src="Images/iconcheck.ico" style="width:5vw;">
+                            <p class="mt-4">THANK YOU FOR YOUR SUPPORT</p>
+                            <hr style="width:50vw;"> 
+                        </div>
+                    </div> 
+                </div>
                 <hr style="width:50vw;">
                 <a href="ProductList">
                     <button type="button" class="btn btn-outline-dark mt-5" >Continue Shopping</button>
                 </a>
             </div>
             <!--Empty Favorite End-->
-            
+
             <!--Footer-->
             <div style="position: fixed; bottom: 0;width: 100%;">
                 <jsp:include page="include/footer.jsp"/>

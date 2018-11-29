@@ -17,10 +17,23 @@
             <jsp:include page="include/header.jsp"/>
             <!--Empty Favorite-->
             <div style="margin-top: 10vh" class="text-center">     
-                <h1 class="mb-4">Thanks for Purchase</h1>
-                <p class="mb-5">We Hope you like ours Product. </p>
+                <h1 class="mb-4">Hello</h1>
+                <p class="mb-5">nice to meet you , ${customer.fname} ${customer.lname}</p>
                 <hr class="mb-5" style="width:50vw">
-                <img src="Images/iconcheck.ico" style="width:5vw;">
+                <div class="text-center">
+                    <p style="font-size:25px;">Your Profile</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <p>Phone : ${customer.phone}</p>
+                        <p>E-mail : ${customer.mail}</p>
+                        <p>Street : ${customer.street}</p>
+                        <p>City : ${customer.city}</p>
+                        <p>State : ${customer.statefull}</p>
+                        <p>Zip Code : ${customer.zipcode}</p>
+                    </div>
+                    
+                </div>
                 <hr style="width:50vw;">
                 <a href="ProductList">
                     <button type="button" class="btn btn-outline-dark mt-5" >Continue Shopping</button>
