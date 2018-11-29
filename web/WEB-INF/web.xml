@@ -40,6 +40,18 @@
         <servlet-name>CartServlet</servlet-name>
         <servlet-class>Servlet.CartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <servlet-class>Servlet.RemoveProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MinusProductServlet</servlet-name>
+        <servlet-class>Servlet.MinusProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PlusProductServlet</servlet-name>
+        <servlet-class>Servlet.PlusProductServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/Cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <url-pattern>/RemoveProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MinusProductServlet</servlet-name>
+        <url-pattern>/MinusProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlusProductServlet</servlet-name>
+        <url-pattern>/PlusProduct</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,53 +16,62 @@ import java.util.Map;
  *
  * @author Pluem
  */
-public class ShoppingCart implements Serializable{
-    private Map<String,LineItem> cart;
+public class ShoppingCart implements Serializable {
+
+    private Map<String, LineItem> cart;
 
     public ShoppingCart() {
         cart = new HashMap();
     }
-    
-    public void add(Product p){
+
+    public void add(Product p) {
         LineItem line = cart.get(p.getProductname());
-        if(line == null){
+        if (line == null) {
 //            String product = Integer.toString(p.getProductid());
             cart.put(p.getProductname(), new LineItem(p));
             System.out.println("test1");
-        }else{
+        } else {
             System.out.println("test");
-            line.setQuantity(line.getQuantity()+1);
+            line.setQuantity(line.getQuantity() + 1);
         }
     }
-    
-    public void remove(Product p){
+
+    public void reduce(Product p) {
+        LineItem line = cart.get(p.getProductname());
+        line.setQuantity(line.getQuantity() - 1);
+        if (line.getQuantity() == 0) {
+            remove(p);
+        }
+    }
+
+    public void remove(Product p) {
         String product = Integer.toString(p.getProductid());
         this.remove(product);
     }
-    
-    public void remove(String productCode){
+
+    public void remove(String productCode) {
         cart.remove(productCode);
     }
-    
-    public double getTotalPrice(){
+
+    public double getTotalPrice() {
         double sum = 0;
         Collection<LineItem> lineItems = cart.values();
-        for(LineItem lineItem : lineItems){
+        for (LineItem lineItem : lineItems) {
             sum += lineItem.getTotalPrice();
         }
         return sum;
     }
-    
-    public int getTotalQuantity(){
+
+    public int getTotalQuantity() {
         int sum = 0;
         Collection<LineItem> linesItems = cart.values();
-        for(LineItem linesItem : linesItems){
+        for (LineItem linesItem : linesItems) {
             sum += linesItem.quantity;
         }
         return sum;
     }
-    
-    public List<LineItem> getLineItems(){
+
+    public List<LineItem> getLineItems() {
         return new ArrayList(cart.values());
     }
 }

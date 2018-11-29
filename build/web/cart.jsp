@@ -37,7 +37,7 @@
                             <h5>YOUR CART ( ${cart.totalQuantity} )</h5>
                             <hr>
                             <div class="text-center">
-                            <br><h5 class="mt-5">${emptycart}</h5>
+                                <br><h5 class="mt-5">${emptycart}</h5>
                             </div>
                             <c:forEach items="${cart.lineItems}" var="lineItem">
                                 <div>
@@ -57,7 +57,9 @@
                                                     <p>${lineItem.product.productname}</p>
                                                     <p> ${lineItem.product.producttype} </p>
                                                     <p> ${lineItem.product.productsize} </p>
-                                                    <p> ${lineItem.quantity} </p>
+                                                    <a href="MinusProduct?productid=${lineItem.product.productid}"><button>-</button></a>
+                                                     ${lineItem.quantity} 
+                                                    <a href="PlusProduct?productid=${lineItem.product.productid}"><button>+</button></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +68,9 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <button type="button" class="btn btn-outline-secondary">Remove</button>
+                                        <a href="RemoveProduct?productid=${lineItem.product.productid}">
+                                            <button type="button" class="btn btn-outline-secondary">Remove</button>
+                                        </a>
                                     </div>
                                     <hr>
                                 </div>
@@ -92,7 +96,7 @@
                             </div>
                             <hr>
                             <div class="text-center">
-                                <a href="Payment"><button type="button" class="btn btn-outline-warning">CHECKOUT</button></a>
+                                <a href="Payment?productid=${product.productid}"><button type="button" class="btn btn-outline-warning">CHECKOUT</button></a>
                             </div>
                         </div>
                     </div>

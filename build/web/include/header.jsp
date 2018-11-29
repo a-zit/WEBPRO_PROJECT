@@ -26,11 +26,6 @@
                     <ul class="navbar-nav ml-auto">
                         <form class="form-inline my-2 my-lg-0 mr-5" action="Search" method="post" >
                             <div class="input-group">
-                                <select name="searchoption">
-                                    <option value="type">TYPE</option>
-                                    <option value="price">PRICE</option>
-                                    <option value="size">SIZE</option>
-                                </select>
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>    
                                 </div>
