@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <p>${cart.totalPrice} ฿</p>
-                                    <p>100 ฿</p>
+                                    <p>100 ฿</p>    
                                     <p>2099 ฿</p>
                                 </div>
                             </div>

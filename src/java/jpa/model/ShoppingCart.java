@@ -45,8 +45,7 @@ public class ShoppingCart implements Serializable {
     }
 
     public void remove(Product p) {
-        String product = Integer.toString(p.getProductid());
-        this.remove(product);
+        this.remove(p.getProductname());
     }
 
     public void remove(String productCode) {

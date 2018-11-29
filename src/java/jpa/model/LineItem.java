@@ -29,7 +29,7 @@ public class LineItem {
     }
     
     public double getTotalPrice(){
-        return this.quantity*this.salePrices;
+        return this.quantity*this.product.getPrice();
     }
     
     public Product getProduct(){
