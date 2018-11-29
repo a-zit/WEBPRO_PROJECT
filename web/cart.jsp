@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-sm-7 card">
                         <div class="card-body">
-                            <h5>YOUR CART (  )</h5>
+                            <h5>YOUR CART ( ${cart.totalQuantity} )</h5>
                             <hr>
                             <c:forEach items="${cart.lineItems}" var="lineItem">
                                 <div>
