@@ -89,7 +89,7 @@
                             </div>
                             <hr>
                             <div class="text-center">
-                                <a href="payment.jsp"><button type="button" class="btn btn-outline-warning">CHECKOUT</button></a>
+                                <a href="Payment"><button type="button" class="btn btn-outline-warning">CHECKOUT</button></a>
                             </div>
                         </div>
                     </div>
