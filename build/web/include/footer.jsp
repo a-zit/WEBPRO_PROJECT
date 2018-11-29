@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/shop-item.css" />
     </head>
     <body>
-        <footer class="py-2 bg-dark" style="">
+        <footer class="py-2 bg-dark" style="margin: -10px -10px;">
             <div class="container">
                 <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
             </div>

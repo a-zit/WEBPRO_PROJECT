@@ -18,7 +18,7 @@
         <meta name="author" content="" />
 
         <title>Product - Page</title>
-
+        <link rel="stylesheet" type="text/css" href="CSS/loginstyle.css" />
         <link rel="stylesheet" type="text/css" href="CSS/mystyle.css" />
         <link
             href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -38,24 +38,19 @@
             crossorigin="anonymous"
             />
     </head>
-    <body>
+    <body id="LoginForm">
         <!-- Navigation -->
         <jsp:include page="include/header.jsp"/>
 
 
         <!-- Page Content -->
+         <img  class="mt-5" src="Images/headerpic.jpg" style="width:100vw;opacity: 0.5;">
         <div class="container">
             <!-- Jumbotron Header -->
-            <header class="jumbotron my-4">
-                <h1 class="display-3">A Warm Welcome!</h1>
-                <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam,
-                    eligendi, in quo sunt possimus non incidunt odit vero aliquid
-                    similique quaerat nam nobis illo aspernatur vitae fugiat numquam
-                    repellat.
-                </p>
-                <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-            </header>
+<!--            <header class="jumbotron my-4">
+                
+            </header>-->
+           
             <hr>
 
             <!-- Page Features -->
