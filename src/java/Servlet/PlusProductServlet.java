@@ -14,7 +14,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
+import jpa.model.Product;
+import jpa.model.ShoppingCart;
 import jpa.model.controller.ProductJpaController;
 
 /**
@@ -30,18 +33,15 @@ public class PlusProductServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//                String productId = request.getParameter("productid");
-//        ProductsJpaController productsCtrl = new ProductsJpaController(utx, emf);
-//        String sizeId = request.getParameter("sizeid");
-//        Products product = productsCtrl.findProducts(Integer.parseInt(productId));
-//        SizesJpaController sizeCtrl = new SizesJpaController(utx, emf);
-//        Sizes size = sizeCtrl.findSizes(Integer.parseInt(sizeId));
-//        HttpSession session = request.getSession();
-//        Cart cart = (Cart) session.getAttribute("cart");
-//        cart.add(product, size);
-//        response.sendRedirect("Cart");
+
             String productId = request.getParameter("productid");
             ProductJpaController controller = new ProductJpaController(utx, emf);
+            Product product = controller.findProduct(Integer.parseInt(productId));
+            
+            HttpSession session = request.getSession();
+            ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+            cart.add(product);
+            response.sendRedirect("Cart");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
