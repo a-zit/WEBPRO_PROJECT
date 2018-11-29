@@ -34,18 +34,22 @@ public class SearchServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
+        
         ProductJpaController productJpaController = new ProductJpaController(utx, emf);
+        
+        
         String searchinput = request.getParameter("searchinput");
         String searchtype = request.getParameter("searchtype");
+
 
         if (searchinput.length() == 0) {
             searchinput = "";
         }
-        if (searchtype.length() == 4) {
+        if (searchtype.length() == 1) {
             searchtype = "";
         }
 
-        List<Product> products = productJpaController.findProductNameType(searchtype, searchtype);
+        List<Product> products = productJpaController.findProductNameType(searchinput, searchtype);
         session.setAttribute("products", products);
         getServletContext().getRequestDispatcher("/productlist.jsp").forward(request, response);
 

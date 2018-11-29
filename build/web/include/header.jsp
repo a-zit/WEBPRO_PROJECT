@@ -32,15 +32,16 @@
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>    
                                 </div>
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchinput">
+
+                                <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" name="searchinput">
 
                                 <select name="searchtype">
-                                     <option value="Type">Type</option>
-                                    <option value="tshirt">T-shirt</option>
-                                    <option value="jacket">Jacket</option>
-                                    <option value="hoodie">Hoodie</option>
-                                    <option value="sweater">Sweater</option>
-                                    <option value="polo">Polo</option>
+                                    <option value="T">Type</option>
+                                    <option value="T-SHIRT">T-shirt</option>
+                                    <option value="JACKET">Jacket</option>
+                                    <option value="HOODIE">Hoodie</option>
+                                    <option value="SWEATER">Sweater</option>
+                                    <option value="POLO">Polo</option>
                                 </select>
                             </div>
                         </form>
