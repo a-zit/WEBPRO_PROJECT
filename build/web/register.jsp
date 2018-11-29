@@ -48,21 +48,21 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="street" placeholder="Street" name="street">
+                            <input type="text" class="form-control" id="street" placeholder="Street" name="street" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="city" placeholder="City" name="city">
+                            <input type="text" class="form-control" id="city" placeholder="City" name="city" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="stateful" placeholder="State" name="statefull">
+                            <input type="text" class="form-control" id="stateful" placeholder="State" name="statefull" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="zipcode" placeholder="Zipcode" name="zipcode">
+                            <input type="text" class="form-control" id="zipcode" placeholder="Zipcode" name="zipcode" maxlength="5" required>
                         </div>
 
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="inputTelno" placeholder="Tel Number" name="telno" required>
+                            <input type="text" class="form-control" id="inputTelno" placeholder="Tel Number" name="telno"  maxlength="10" required>
                         </div>
 
                         <div class="form-group">

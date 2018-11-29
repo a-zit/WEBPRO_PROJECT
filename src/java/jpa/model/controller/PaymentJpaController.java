@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.UserTransaction;
@@ -181,7 +182,10 @@ public class PaymentJpaController implements Serializable {
         query.setParameter("cardid", cardno);
         try {
             return (Payment)query.getSingleResult();
-        } finally {
+        }catch(NoResultException ex){
+            return null;
+        }
+        finally {
             em.close();
         }
     }
