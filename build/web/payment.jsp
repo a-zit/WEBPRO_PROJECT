@@ -78,12 +78,26 @@
                                     <label>CVV</label>
                                     <input class="form-control" type="text" name="">
                                 </div>
-                                <button type="submit" class="btn btn-danger mb-2">Accept</button>
+                                <div class="row">
+                                    <div class="col-sm text-left">
+                                        <button type="submit" class="btn btn-danger mb-2">Accept</button>
+
+                                    </div>
+<!--                                    <div class="col-sm-6">
+
+                                    </div>-->
+                                    <div class="col-sm text-right">
+                                        <a href="Cart">
+                                            <button type="btn" class="btn btn-success">Back</button> 
+                                        </a>
+                                    </div>
+
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <!--footer-->

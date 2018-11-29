@@ -65,6 +65,16 @@ public class Payment implements Serializable {
     public Payment() {
     }
 
+    public Payment(String cardid, String cardowner, String expmonth, String expyear, String cvv) {
+        this.cardid = cardid;
+        this.cardowner = cardowner;
+        this.expmonth = expmonth;
+        this.expyear = expyear;
+        this.cvv = cvv;
+    }
+
+    
+    
     public Payment(Integer paymentid) {
         this.paymentid = paymentid;
     }

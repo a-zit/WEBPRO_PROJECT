@@ -7,27 +7,78 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.annotation.Resource;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.transaction.UserTransaction;
+import jpa.model.ShoppingCart;
+import jpa.model.Payment;
+import jpa.model.controller.PaymentJpaController;
 
 /**
  *
  * @author DEMO TEST
  */
 public class PaymentServlet extends HttpServlet {
+
+    @PersistenceUnit(unitName = "LycanStorePU")
+    EntityManagerFactory emf;
+    @Resource
+    UserTransaction utx;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/payment.jsp").forward(request, response);
-        
+        HttpSession session = request.getSession(true);
+        ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+        if (cart == null) {
+            getServletContext().getRequestDispatcher("/ProductList").forward(request, response);
+        } else {
+            getServletContext().getRequestDispatcher("/payment.jsp").forward(request, response);
+        }
+
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String fname = request.getParameter("fname");
+        String lname = request.getParameter("lname");
+        String street = request.getParameter("street");
+        String city = request.getParameter("city");
+        String statefull = request.getParameter("statefull");
+        String telno = request.getParameter("telno");
+        String zipcode = request.getParameter("zipcode");
+
+        String cardno = request.getParameter("cardno");
+        String cardname = request.getParameter("cardname");
+        String month = request.getParameter("month");
+        String year = request.getParameter("year");
+        String cvv = request.getParameter("cvv");
+
+        PaymentJpaController paymentJpaController = new PaymentJpaController(utx, emf);
+
         
+        if(paymentJpaController.findPaymentByCard(cardno)==null){
+            Payment payment = new Payment(cardno, cardname, month, year, cvv);
+            request.setAttribute("fname", fname);
+            request.setAttribute("lname", lname);
+            request.setAttribute("street", street);
+            request.setAttribute("city", city);
+            request.setAttribute("statefull", lname);
+            request.setAttribute("telno", lname);
+            request.setAttribute("zipcode", lname);
+            request.setAttribute("cardno", lname);
+            
+        }
+
     }
+
     @Override
     public String getServletInfo() {
         return "Short description";
