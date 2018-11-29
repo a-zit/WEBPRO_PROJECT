@@ -16,9 +16,9 @@
         <!--header-->
         <jsp:include page="include/header.jsp"/>
         <!--body-->
-        <div class="container mt-5 mb-5">
+        <div class="container mt-5 mb-5" style="width:40vw;">
             <div class="row">
-                <div class="col-sm-7 text-center">
+                <div class="col text-center">
                     <div class="card">
                         <div class="card-header">
                             ADDRESS
