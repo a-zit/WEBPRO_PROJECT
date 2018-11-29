@@ -27,8 +27,12 @@ public class CartServlet extends HttpServlet {
         ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
         if(cart==null){
             session.setAttribute("emptycart", "Your cart is Empty , Please buy Something :D");
+            session.setAttribute("hundredshow", 0);
+            session.setAttribute("total", 0);
         }
         else{
+             session.setAttribute("hundredshow", "100 ฿");
+             session.setAttribute("total", cart.getTotalPrice()+100);
              session.setAttribute("emptycart", null);
         }
         getServletContext().getRequestDispatcher("/cart.jsp").forward(request, response);

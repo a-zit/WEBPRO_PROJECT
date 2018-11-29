@@ -82,7 +82,7 @@
                         <div class="card-body">
                             <h5>SUMMARY</h5>
                             <hr>
-                            <div class="row">
+                            <div class="row" style="font-size: 12px;">
                                 <div class="col-sm-9">
                                     <p>SUBTOTAL</p>
                                     <p>ESTIMATED DUTIES & TAXES</p>
@@ -90,8 +90,8 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <p>${cart.totalPrice} ฿</p>
-                                    <p>100 ฿</p>    
-                                    <p>2099 ฿</p>
+                                    <p>${hundredshow}</p>    
+                                    <p>${total} ฿</p>
                                 </div>
                             </div>
                             <hr>
