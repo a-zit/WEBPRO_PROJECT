@@ -35,8 +35,7 @@ public class SearchServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         ProductJpaController productJpaController = new ProductJpaController(utx, emf);
-
-        String searchinput = request.getParameter("searchoption");
+        String searchinput = request.getParameter("searchinput");
         if (searchinput != null) {
 
             List<Product> products = productJpaController.findProductName(searchinput);
