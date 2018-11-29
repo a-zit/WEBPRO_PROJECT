@@ -18,87 +18,72 @@
         <!--body-->
         <div class="container mt-5 mb-5">
             <div class="row">
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-7 text-center">
                     <div class="card">
                         <div class="card-header">
                             ADDRESS
                         </div>
                         <div class="card-body text-left">
-                            <form>
+                            <form action="Payment" method="post">
                                 <div class="form-group">
                                     <label>First Name</label>
-                                    <input class="form-control" type="text" name="fname" placeholder="papop">
+                                    <input class="form-control" type="text" name="fname" value="${customer.fname}">
                                 </div>
                                 <div class="form-group">
                                     <label>Last Name</label>
-                                    <input class="form-control" type="text" name="lname" placeholder="ruengsupapichat">
-                                </div>
-                                <div class="form-group">
-                                    <label>Address</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="text" name="lname" value="${customer.lname}">
                                 </div>
                                 <div class="form-group">
                                     <label>Street</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="street" name="street" value="${customer.street}">
                                 </div>
                                 <div class="form-group">
                                     <label>City</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="city" name="city" value="${customer.city}">
                                 </div>
                                 <div class="form-group">
                                     <label>State</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="statefull" name="statefull" value="${customer.statefull}">
                                 </div>
                                 <div class="form-group">
                                     <label>Tel</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="telno" name="telno" value="${customer.phone}">
                                 </div>
                                 <div class="form-group">
                                     <label>Zip code</label>
-                                    <input class="form-control" type="text" name="" placeholder="test">
+                                    <input class="form-control" type="zipcode" name="zipcode" value="${customer.zipcode}" >
                                 </div>
-                                <button type="submit" class="btn btn-primary mb-2">Edit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card ">
-                        <div class="card-header text-center">
-                            Payment
-                        </div>
-                        <div class="card-body">
-                            <form>
                                 <div class="form-group">
                                     <label>Credit card 16 digit</label>
-                                    <input class="form-control" type="text" name="" placeholder="">
+                                    <input class="form-control" type="text" name="cardno">
                                 </div>
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control" type="text" name="" placeholder="">
+                                    <input class="form-control" type="text" name="cardname">
                                 </div>
                                 <div class="form-group">
                                     <label>Month / Year </label>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-sm">
-                                                <input class="form-control" type="text" name="" placeholder="month">
+                                                <input class="form-control" type="text" name="month" placeholder="month">
                                             </div>
                                             <div class="col-sm">
-                                                <input class="form-control" type="text" name="" placeholder="year">
+                                                <input class="form-control" type="text" name="year" placeholder="year">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>CVV</label>
-                                    <input class="form-control" type="text" name="" placeholder="179">
+                                    <input class="form-control" type="text" name="">
                                 </div>
                                 <button type="submit" class="btn btn-danger mb-2">Accept</button>
                             </form>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
         <!--footer-->

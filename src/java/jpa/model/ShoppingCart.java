@@ -24,10 +24,14 @@ public class ShoppingCart implements Serializable{
     }
     
     public void add(Product p){
-        LineItem line = cart.get(p.getProductid());
+        LineItem line = cart.get(p.getProductname());
         if(line == null){
-            String product = Integer.toString(p.getProductid());
-            cart.put(product, new LineItem(p));
+//            String product = Integer.toString(p.getProductid());
+            cart.put(p.getProductname(), new LineItem(p));
+            System.out.println("test1");
+        }else{
+            System.out.println("test");
+            line.setQuantity(line.getQuantity()+1);
         }
     }
     

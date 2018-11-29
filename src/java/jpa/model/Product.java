@@ -36,7 +36,9 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Product.findByProducttype", query = "SELECT p FROM Product p WHERE p.producttype = :producttype")
     , @NamedQuery(name = "Product.findByPrice", query = "SELECT p FROM Product p WHERE p.price = :price")
     , @NamedQuery(name = "Product.findByProductsize", query = "SELECT p FROM Product p WHERE p.productsize = :productsize")
-    , @NamedQuery(name = "Product.findByProductdetail", query = "SELECT p FROM Product p WHERE p.productdetail = :productdetail")})
+    , @NamedQuery(name = "Product.findByProductdetail", query = "SELECT p FROM Product p WHERE p.productdetail = :productdetail")
+        
+})
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -169,5 +171,5 @@ public class Product implements Serializable {
     public String toString() {
         return "jpa.model.Product[ productid=" + productid + " ]";
     }
-    
+
 }
