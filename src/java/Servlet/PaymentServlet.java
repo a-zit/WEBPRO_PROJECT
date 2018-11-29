@@ -7,6 +7,8 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
@@ -41,12 +43,14 @@ public class PaymentServlet extends HttpServlet {
         } else {
             getServletContext().getRequestDispatcher("/payment.jsp").forward(request, response);
         }
+        session.setAttribute("paymentalert", null);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession(true);
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String street = request.getParameter("street");
@@ -62,19 +66,18 @@ public class PaymentServlet extends HttpServlet {
         String cvv = request.getParameter("cvv");
 
         PaymentJpaController paymentJpaController = new PaymentJpaController(utx, emf);
+        Payment paymentfromdb = paymentJpaController.findPaymentByCard(cardno);
 
-        
-        if(paymentJpaController.findPaymentByCard(cardno)==null){
-            Payment payment = new Payment(cardno, cardname, month, year, cvv);
-            request.setAttribute("fname", fname);
-            request.setAttribute("lname", lname);
-            request.setAttribute("street", street);
-            request.setAttribute("city", city);
-            request.setAttribute("statefull", lname);
-            request.setAttribute("telno", lname);
-            request.setAttribute("zipcode", lname);
-            request.setAttribute("cardno", lname);
-            
+        if (paymentJpaController.findPaymentByCard(cardno) == null) {
+            try {
+                Payment payment = new Payment(cardno, cardname, month, year, cvv);
+                paymentJpaController.create(payment);
+                getServletContext().getRequestDispatcher("/paymentComplete.jsp").forward(request, response);
+            } catch (Exception ex) {
+                Logger.getLogger(PaymentServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            getServletContext().getRequestDispatcher("/paymentComplete.jsp").forward(request, response);
         }
 
     }

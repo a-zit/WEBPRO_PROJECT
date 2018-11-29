@@ -26,6 +26,9 @@
                         <div class="card-body text-left">
                             <form action="Payment" method="post">
                                 <div class="form-group">
+                                    ${paymentalert}
+                                </div>
+                                <div class="form-group">
                                     <label>First Name</label>
                                     <input class="form-control" type="text" name="fname" value="${customer.fname}">
                                 </div>
@@ -77,23 +80,12 @@
                                 <div class="form-group">
                                     <label>CVV</label>
                                     <input class="form-control" type="text" name="">
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm text-left">
-                                        <button type="submit" class="btn btn-danger mb-2">Accept</button>
-
-                                    </div>
-<!--                                    <div class="col-sm-6">
-
-                                    </div>-->
-                                    <div class="col-sm text-right">
-                                        <a href="Cart">
-                                            <button type="btn" class="btn btn-success">Back</button> 
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </form>
+                                </div>                                
+                                <button type="submit" class="btn btn-danger mb-2">Accept</button>
+                            </form>                       
+                            <a href="ProductList">
+                                <button type="btn" class="btn btn-success">Back to HomePage</button> 
+                            </a>
                         </div>
                     </div>
                 </div>
