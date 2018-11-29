@@ -4,6 +4,7 @@
     Author     : Pluem
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -48,9 +49,23 @@
                             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
                             4.0 stars
                         </div>
-                            <a href="AddItemToCart?productid=${product.productid}" class="btn btn-danger">Add To Cart</a>
+                        <a href="AddItemToCart?productid=${product.productid}" class="btn btn-danger">Add To Cart</a>
                     </div>
                     <!-- /.card -->
+                    <div class="card card-outline-secondary my-4">
+                        <div class="card-header">
+                            Post your Review 
+                        </div>
+                        <div class="card-body">
+                            <form action="Review">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="review"></textarea>
+                                    <input type="submit" value="Share">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
                     <div class="card card-outline-secondary my-4">
                         <div class="card-header">
