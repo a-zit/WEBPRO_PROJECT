@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="CSS/loginstyle.css" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -19,8 +20,7 @@
         <!-- Custom styles for this template -->
         <link rel="stylesheet" type="text/css" href="CSS/shop-item.css" />
     </head>
-    <body>
-
+    <body id="LoginForm">
         <!-- Navigation -->
         <jsp:include page="include/header.jsp"/>
 

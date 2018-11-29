@@ -18,7 +18,7 @@
         <meta name="author" content="" />
 
         <title>Product - Page</title>
-
+        <link rel="stylesheet" type="text/css" href="CSS/loginstyle.css" />
         <link rel="stylesheet" type="text/css" href="CSS/mystyle.css" />
         <link
             href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -38,7 +38,7 @@
             crossorigin="anonymous"
             />
     </head>
-    <body>
+    <body id="LoginForm">
         <!-- Navigation -->
         <jsp:include page="include/header.jsp"/>
 
