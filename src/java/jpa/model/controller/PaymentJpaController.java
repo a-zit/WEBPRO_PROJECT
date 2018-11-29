@@ -174,6 +174,17 @@ public class PaymentJpaController implements Serializable {
             em.close();
         }
     }
+    
+    public Payment findPaymentByCard(String cardno) {
+        EntityManager em = getEntityManager();
+        Query query = em.createNamedQuery("Payment.findByCardid");
+        query.setParameter("cardid", cardno);
+        try {
+            return (Payment)query.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 
     public int getPaymentCount() {
         EntityManager em = getEntityManager();

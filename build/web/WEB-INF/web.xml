@@ -32,6 +32,10 @@
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>Servlet.PaymentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>Servlet.CartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>PaymentServlet</servlet-name>
         <url-pattern>/Payment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/Cart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -36,6 +36,9 @@
                         <div class="card-body">
                             <h5>YOUR CART ( ${cart.totalQuantity} )</h5>
                             <hr>
+                            <div class="text-center">
+                            <br><h5 class="mt-5">${emptycart}</h5>
+                            </div>
                             <c:forEach items="${cart.lineItems}" var="lineItem">
                                 <div>
                                     <div class="row">

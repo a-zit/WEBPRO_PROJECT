@@ -28,8 +28,8 @@
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchinput">
                             <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                         </form>
-                        <li class="nav-item"><a class="nav-link" href="favorite.jsp">Favorite</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cart.jsp" style="border-right: 3px solid #bec4ce;">Cart ( ${cart.totalQuantity} )</a></li>  
+                        
+                        <li class="nav-item"><a class="nav-link" href="Cart" style="border-right: 3px solid #bec4ce;">Cart ( ${cart.totalQuantity} )</a></li>  
                         <li class="nav-item">
                             <a id="myBtn" class="cursor nav-link" href="Login">${loginshow}</a>
                         </li>
