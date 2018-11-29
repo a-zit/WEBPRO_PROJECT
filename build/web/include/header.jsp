@@ -25,10 +25,19 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <form class="form-inline my-2 my-lg-0 mr-5" action="Search" method="post" >
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchinput">
-                            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                            <div class="input-group">
+                                <select name="searchoption">
+                                    <option value="type">TYPE</option>
+                                    <option value="price">PRICE</option>
+                                    <option value="size">SIZE</option>
+                                </select>
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>    
+                                </div>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchinput">
+                            </div>
                         </form>
-                        
+
                         <li class="nav-item"><a class="nav-link" href="Cart" style="border-right: 3px solid #bec4ce;">Cart ( ${cart.totalQuantity} )</a></li>  
                         <li class="nav-item">
                             <a id="myBtn" class="cursor nav-link" href="Login">${loginshow}</a>
@@ -37,7 +46,7 @@
                         <li class="nav-item">
                             <a id="myBtn" class="cursor nav-link" href="Logout">${logoutshow}</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
