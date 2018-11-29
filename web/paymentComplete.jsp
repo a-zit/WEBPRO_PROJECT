@@ -35,6 +35,7 @@
                             <img src="Images/iconcheck.ico" style="width:5vw;">
                             <p class="mt-4">THANK YOU FOR YOUR SUPPORT</p>
                             <hr style="width:50vw;"> 
+                            
                         </div>
                     </div> 
                 </div>

@@ -72,7 +72,9 @@ public class PaymentServlet extends HttpServlet {
             try {
                 Payment payment = new Payment(cardno, cardname, month, year, cvv);
                 paymentJpaController.create(payment);
+
                 getServletContext().getRequestDispatcher("/paymentComplete.jsp").forward(request, response);
+
             } catch (Exception ex) {
                 Logger.getLogger(PaymentServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
