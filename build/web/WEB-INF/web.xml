@@ -6,10 +6,7 @@
     </filter>
     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
-        <servlet-name>RegisterServlet</servlet-name>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-name>SearchServlet</servlet-name>
-        <servlet-name>ProductDetailServlet</servlet-name>
         <servlet-name>AddItemToCartServlet</servlet-name>
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-name>MyAccountServlet</servlet-name>
