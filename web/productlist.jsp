@@ -45,7 +45,7 @@
 
 
         <!-- Page Content -->
-         <img  class="mt-5" src="Images/headerpic.jpg" style="width:100vw;opacity: 0.5;">
+<!--         <img  class="mt-5" src="Images/headerpic.jpg" style="width:100vw;opacity: 0.5;">-->
         <div class="container">
             <!-- Jumbotron Header -->
 <!--            <header class="jumbotron my-4">
@@ -55,7 +55,7 @@
             <hr>
 
             <!-- Page Features -->
-            <div class="row text-center">
+            <div class="mt-5 row text-center">
                 <c:forEach items="${products}" var="p">
                     <div class="col-lg-3 col-md-6 mb-4" style="height: auto;">
                         <div class="card">
