@@ -58,10 +58,21 @@
                         </div>
                         <div class="card-body">
                             <form action="Review">
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="review"></textarea>
-                                    <input type="submit" value="Share">
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Topic</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Review Topic" aria-label="Your Topic Review" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">With textarea</span>
+                                    </div>
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                </div>
+                                <div class="form-group">         
+                                    <input class="btn btn btn-outline-primary mt-2" type="submit" value="Submit">
                                 </div>
                             </form>
                         </div>
