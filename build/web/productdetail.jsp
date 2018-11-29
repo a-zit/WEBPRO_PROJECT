@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/shop-item.css" />
     </head>
     <body id="LoginForm">
+
         <!-- Navigation -->
         <jsp:include page="include/header.jsp"/>
 
