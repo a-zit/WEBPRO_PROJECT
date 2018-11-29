@@ -42,9 +42,10 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Product.findByProductname", query = "SELECT p FROM Product p WHERE upper(p.productname) like upper(:productname)")
     , @NamedQuery(name = "Product.findByProducttype", query = "SELECT p FROM Product p WHERE upper(p.producttype) like upper(:producttype)")
     , @NamedQuery(name = "Product.findByPrice", query = "SELECT p FROM Product p WHERE p.price = :price")
-    , @NamedQuery(name = "Product.findByProductsize", query = "SELECT p FROM Product p WHERE upper(p.productsize) = upper(:productsize)")
-    
-        
+    , @NamedQuery(name = "Product.findByProductsize", query = "SELECT p FROM Product p WHERE upper(p.productsize) LIKE upper(:productsize)")
+    , @NamedQuery(name = "Product.findProductType", query = "SELECT p FROM Product p WHERE upper(p.producttype) LIKE upper(:producttype)")
+    , @NamedQuery(name = "Product.findProductNameType", query = "SELECT p FROM Product p WHERE upper(p.producttype) LIKE upper(:producttype) "
+            + " AND upper(p.producttype) LIKE upper(:producttype)")
 })
 public class Product implements Serializable {
 

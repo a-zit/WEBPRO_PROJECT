@@ -24,14 +24,27 @@
                 </a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
+
+
+
                         <form class="form-inline my-2 my-lg-0 mr-5" action="Search" method="post" >
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>    
                                 </div>
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchinput">
+
+                                <select name="searchtype">
+                                     <option value="Type">Type</option>
+                                    <option value="tshirt">T-shirt</option>
+                                    <option value="jacket">Jacket</option>
+                                    <option value="hoodie">Hoodie</option>
+                                    <option value="sweater">Sweater</option>
+                                    <option value="polo">Polo</option>
+                                </select>
                             </div>
                         </form>
+
 
                         <li class="nav-item"><a class="nav-link" href="Cart" style="border-right: 3px solid #bec4ce;">Cart ( ${cart.totalQuantity} )</a></li>  
                         <li class="nav-item">
