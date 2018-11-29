@@ -35,20 +35,16 @@ public class SearchServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         ProductJpaController productJpaController = new ProductJpaController(utx, emf);
-        String searchinput = request.getParameter("searchinput");
-        String type = request.getParameter("type");
-        int price = Integer.parseInt(request.getParameter("price"));
-        String size = request.getParameter("size");
-        
 
-
+        String searchinput = request.getParameter("searchoption");
         if (searchinput != null) {
-            
+
             List<Product> products = productJpaController.findProductName(searchinput);
-            
+
             session.setAttribute("products", products);
             getServletContext().getRequestDispatcher("/productlist.jsp").forward(request, response);
         } else {
+
             List<Product> products = productJpaController.findProductName(" ");
             request.setAttribute("products", products);
             getServletContext().getRequestDispatcher("/productlist.jsp").forward(request, response);

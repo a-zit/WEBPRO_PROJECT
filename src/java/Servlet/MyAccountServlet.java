@@ -41,7 +41,7 @@ public class MyAccountServlet extends HttpServlet {
                 
                 session.setAttribute("customer", customer);
                 
-                getServletContext().getRequestDispatcher("/myaacount.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/myaccount.jsp").forward(request, response);
             
             
     }
